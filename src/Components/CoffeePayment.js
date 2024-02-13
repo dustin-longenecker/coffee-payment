@@ -25,7 +25,13 @@ const CoffeePayment = () => {
     }
   };
   
+  const removeEmployee = (index) => {
+    const updatedCoffees = [...coffees];
+    updatedCoffees.splice(index, 1);
+    setCoffees(updatedCoffees);
+  };
 
+  
   
   
   return (
@@ -34,8 +40,8 @@ const CoffeePayment = () => {
       <ul>
         {coffees.map((coffee, index) => (
           <li key={index}>
-            <strong>{coffee.name}</strong> - {coffee.drink} (${coffee.cost})
-            {/* <button onClick={() => removeEmployee(index)}>Remove</button> */}
+            <strong>{coffee.name}</strong> - {coffee.drink} (${coffee.cost}) | {coffee.daysPaid} days paid
+            <button onClick={() => removeEmployee(index)}>Remove</button>
           </li>
         ))}
       </ul>
