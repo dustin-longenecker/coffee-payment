@@ -11,6 +11,22 @@ const CoffeePayment = () => {
   const [cost, setCost] = useState(0);
   const [daysPaid, setDaysPaid] = useState(0);
 
+
+
+  const addEmployee = () => {
+    if (name && drink && cost > 0) {
+      setCoffees([...coffees, { name, drink, cost: parseFloat(cost) }]);
+      setName('');
+      setDrink('');
+      setCost(0);
+      setDaysPaid(0);
+    } else {
+      alert('Please fill in all fields and ensure the cost is a valid number greater than zero.');
+    }
+  };
+  
+
+  
   
   return (
     <div>
@@ -19,7 +35,7 @@ const CoffeePayment = () => {
         {coffees.map((coffee, index) => (
           <li key={index}>
             <strong>{coffee.name}</strong> - {coffee.drink} (${coffee.cost})
-            <button onClick={() => removeEmployee(index)}>Remove</button>
+            {/* <button onClick={() => removeEmployee(index)}>Remove</button> */}
           </li>
         ))}
       </ul>
@@ -29,9 +45,9 @@ const CoffeePayment = () => {
       <input type="number" placeholder="Cost" value={cost} onChange={(e) => setCost(e.target.value)} />
       <button onClick={addEmployee}>Add Employee</button>
       <h3>Update Coffee Price:</h3>
-      <input type="number" value={coffeePrice} onChange={updateCoffeePrice} />
-      <button onClick={getNextPayer}>Who's Paying?</button>
-      <h3>Today's Payer: {coffees[payerIndex].name}</h3>
+      {/* <input type="number" value={coffeePrice} onChange={updateCoffeePrice} /> */}
+      {/* <button onClick={getNextPayer}>Who's Paying?</button> */}
+      {/* <h3>Today's Payer: {coffees[payerIndex].name}</h3> */}
     </div>
   );
 };
