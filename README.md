@@ -8,6 +8,11 @@ While the previous approach would work, I decided to add a little flavor to the 
 
 I decided to make it scaleable in regards to adding more people to the coffee buying group. The current solution that I have implemented is rooted in the idea of having a fixed seven person sized group. In the event that I would scale this application. I would most likely implement a running total for each individual to ensure a more fair diviation of funds.
 
+# Areas of Expansion
+
+- Add a database
+- CSS Style 
+
 
 # Getting Started with Create React App
 
