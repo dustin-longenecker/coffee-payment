@@ -1,3 +1,14 @@
+# Logic and Reasoning
+
+I first approached this problem with the idea that the seven participants would just rotate paying for coffee each day under the assumption that everyone ordered the same type of coffee each day. This would make the total be the same every day and would result in the most "fair" practice.
+
+After some thinking time I decided that maybe I would assume that a couple people ordered differently each day resulting in a different total price for each trip. I thought that I could then pick the person with the lowest running total paid as the next in line to pay for the groups coffee.
+
+While the previous approach would work, I decided to add a little flavor to the group's coffee buyer by putting the rotation on a 5 day work week. At the end of the 5 days, the timer would reset for next week. The person paying for Monday (the first day of the timer) would no longer be in the running to pay for the rest of the week. So at the end of 5 days, 5 people out of the 7 would have paid for coffee. This gives each person a 1 out of 2 shot each week to not pay for coffee. 
+
+I decided to make it scaleable in regards to adding more people to the coffee buying group. The current solution that I have implemented is rooted in the idea of having a fixed seven person sized group. In the event that I would scale this application. I would most likely implement a running total for each individual to ensure a more fair diviation of funds.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
