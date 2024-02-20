@@ -6,12 +6,33 @@ After some thinking time I decided that maybe I would assume that a couple peopl
 
 While the previous approach would work, I decided to add a little flavor to the group's coffee buyer by putting the rotation on a 5 day work week. At the end of the 5 days, the timer would reset for next week. The person paying for Monday (the first day of the timer) would no longer be in the running to pay for the rest of the week. So at the end of 5 days, 5 people out of the 7 would have paid for coffee. This gives each person a 1 out of 2 shot each week to not pay for coffee. 
 
+Another idea that came to mind was to add weighted percentages based on the salaries of each of the individuals. This might work in a computer program, but the implmentation of it might not be practical or ethical.
+
 I decided to make it scaleable in regards to adding more people to the coffee buying group. The current solution that I have implemented is rooted in the idea of having a fixed seven person sized group. In the event that I would scale this application. I would most likely implement a running total for each individual to ensure a more fair diviation of funds.
+
+
+# Functionality
+- Add employee
+    - name
+    - coffee style
+    - price
+- Remove employee
+- Calculate next coffee buyer
+- 
 
 # Areas of Expansion
 
 - Add a database
 - CSS Style 
+- Add more functionality
+    1. Change algorithm to align with all of the scenarios I have presented and ones that I have not
+    2. scale it to be specific to the different teams or different departments
+- Think of more ways to choose a buyer
+- 
+
+# Clone and Start
+1. `clone` the repository.
+2. `npm start` inside root directory.
 
 
 # Getting Started with Create React App

@@ -26,6 +26,9 @@ const CoffeePayment = () => {
       setCoffees(prevCoffees => prevCoffees.map(coffee => ({ ...coffee, paid: false })));
     }
   }, [days]);
+  useEffect(() => {
+
+  }, [coffees]);
 
   // add
   const addEmployee = () => {
@@ -93,7 +96,7 @@ const CoffeePayment = () => {
       <ul>
         {coffees.map((coffee, index) => (
           <li key={index}>
-            <strong>{coffee.name}</strong> - {coffee.drink} (${coffee.cost}) | {coffee.paid}
+            <strong>{coffee.name}</strong> - {coffee.drink} (${coffee.cost}) 
             <button onClick={() => removeEmployee(index)}>Remove</button>
           </li>
         ))}
